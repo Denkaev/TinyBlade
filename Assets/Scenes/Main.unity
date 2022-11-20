@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  target: {fileID: 922560769}
+  player: {fileID: 922560767}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -433,7 +433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  maincamera: {fileID: 519420028}
 --- !u!50 &922560771
 Rigidbody2D:
   serializedVersion: 4

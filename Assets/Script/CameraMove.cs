@@ -7,13 +7,18 @@ public class CameraMove : MonoBehaviour
 {
     [SerializeField]
     private float speed = 10f;
-    [SerializeField]
-    private Transform target;
     private Rigidbody2D rb;
+    [SerializeField]
+    private GameObject player;
+    private Vector3 offset;
+    private Vector3 newtrans;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
+        offset.x = transform.position.x - player.transform.position.x;
+        offset.y = transform.position.y - player.transform.position.y;
+        newtrans = transform.position;
     }
 
     private void FixedUpdate()
@@ -21,8 +26,15 @@ public class CameraMove : MonoBehaviour
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
     }
 
-    //public void FollowTarget(float x,float y)
-    //{
-    //    transform.position = new Vector3(x,y);
-    //}
+    private void LateUpdate()
+    {
+        //if (!Input.anyKey||Input.anyKeyDown)
+        if (!Input.anyKey)
+        {
+            newtrans.x = player.transform.position.x + offset.x;
+            newtrans.y = player.transform.position.y + offset.y;
+            transform.position = newtrans;
+        }
+    }
+
 }

@@ -20,7 +20,12 @@ public class PlayerMove : MonoBehaviour
         {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             target.z = transform.position.z;
+            GlobalVariables.FreeCam = true;
         }
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        if (Input.GetMouseButtonUp(1))
+        {
+            GlobalVariables.FreeCam = false;
+        }
     }
 }

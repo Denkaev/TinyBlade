@@ -29,7 +29,8 @@ public class CameraMove : MonoBehaviour
     private void LateUpdate()
     {
         //if (!Input.anyKey||Input.anyKeyDown)
-        if (!Input.anyKey)
+        //if (!Input.anyKey)
+        if(GlobalVariables.FreeCam)
         {
             newtrans.x = player.transform.position.x + offset.x;
             newtrans.y = player.transform.position.y + offset.y;

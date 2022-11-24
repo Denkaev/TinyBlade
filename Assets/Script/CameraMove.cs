@@ -38,4 +38,11 @@ public class CameraMove : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Q))
+            transform.rotation *= Quaternion.Euler(0f, 50f * Time.deltaTime, 0f);
+        else if (Input.GetKey(KeyCode.E))
+            transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
+    }
 }

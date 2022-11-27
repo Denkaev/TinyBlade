@@ -30,14 +30,20 @@ public class CameraMove : MonoBehaviour
             transform.position = newtrans;
         }
 
-        //Ќадо разобрать поччему не работает сразу , а только после движени€ мышкой
-        //“еперь дергаетс€ делает сдвиг и возвращаетс€ на прежнюю позицию сразу
+        //Ќадо разобрать почему не работает сразу , а только после движени€ мышкой
+        //“еперь дергаетс€ делает сдвиг и возвращаетс€ на прежнюю позицию сразу , и движение по ос€м надо делать в общих координатах
+        //“олько один сдвиг
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
         //—лишком резко
-        if (Input.GetKey(KeyCode.Q))
-            transform.rotation = Quaternion.Euler(0f, 0f, 100f);
-        else if (Input.GetKey(KeyCode.E))
-            transform.rotation = Quaternion.Euler(0f, 0f, -100f);
+        if (Input.GetKeyDown(KeyCode.Q))
+            transform.rotation = Quaternion.Euler(0f, 0f, 10f);
+        else if (Input.GetKeyDown(KeyCode.E))
+            transform.rotation = Quaternion.Euler(0f, 0f, -10f);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            rb.velocity = new Vector3(0f, 0f, 10f * speed);
+        else if (Input.GetKeyDown(KeyCode.LeftControl))
+            rb.velocity = new Vector3(0f, 0f, -10f * speed);
+
     }
 
     private void LateUpdate()
@@ -57,13 +63,13 @@ public class CameraMove : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Q))
-            //transform.rotation *= Quaternion.Euler(0f, 50f * Time.deltaTime, 0f);
-            transform.rotation = Quaternion.Euler(0f, 0f , 100f * Time.deltaTime);
-        //else if (Input.GetKey(KeyCode.E))
-        ////transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
-        //transform.rotation = Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKey(KeyCode.Q))
+    //        //transform.rotation *= Quaternion.Euler(0f, 50f * Time.deltaTime, 0f);
+    //        transform.rotation = Quaternion.Euler(0f, 0f , 100f * Time.deltaTime);
+    //    //else if (Input.GetKey(KeyCode.E))
+    //    ////transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
+    //    //transform.rotation = Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
+    //}
 }

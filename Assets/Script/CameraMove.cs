@@ -36,7 +36,14 @@ public class CameraMove : MonoBehaviour
         rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, Input.GetAxisRaw("Vertical") * speed);
         //Слишком резко
         if (Input.GetKeyDown(KeyCode.Q))
-            transform.rotation = Quaternion.Euler(0f, 0f, 10f);
+        //            transform.rotation = Quaternion.Euler(0f, 0f, 10f);
+        //Вроде работает но надо тут ключ активировать а не само вращение делать
+        {
+            GlobalVariables.RotateTimer = 10;
+            GlobalVariables.RotateCam = 1f;
+        }
+        else if (GlobalVariables.RotateTimer > 0)
+            GlobalVariables.RotateTimer -= 1;
         else if (Input.GetKeyDown(KeyCode.E))
             transform.rotation = Quaternion.Euler(0f, 0f, -10f);
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -63,13 +70,14 @@ public class CameraMove : MonoBehaviour
 
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKey(KeyCode.Q))
-    //        //transform.rotation *= Quaternion.Euler(0f, 50f * Time.deltaTime, 0f);
-    //        transform.rotation = Quaternion.Euler(0f, 0f , 100f * Time.deltaTime);
-    //    //else if (Input.GetKey(KeyCode.E))
-    //    ////transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
-    //    //transform.rotation = Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
-    //}
+    private void Update()
+    {
+        if (GlobalVariables.RotateTimer > 0)
+            transform.Rotate(0f, 0f, GlobalVariables.RotateCam, Space.World);
+        //        //transform.rotation *= Quaternion.Euler(0f, 50f * Time.deltaTime, 0f);
+        //        transform.rotation = Quaternion.Euler(0f, 0f , 100f * Time.deltaTime);
+        //    //else if (Input.GetKey(KeyCode.E))
+        //    ////transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
+        //    //transform.rotation = Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
+    }
 }

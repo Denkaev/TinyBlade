@@ -5,6 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class CameraMove : MonoBehaviour
 {
+    //Zoom
+    public Camera cam;
+    public float maxZoom = 5;
+    public float minZoom = 20;
+    public float sensitivity = 1;
+    float targetZoom;
+
     [SerializeField]
     private float speed = 25f;
     private Rigidbody2D rb;
@@ -14,6 +21,7 @@ public class CameraMove : MonoBehaviour
     private Vector3 newtrans;
     void Start()
     {
+        targetZoom = cam.orthographicSize;
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         offset.x = transform.position.x - player.transform.position.x;
@@ -81,6 +89,13 @@ public class CameraMove : MonoBehaviour
         //    //else if (Input.GetKey(KeyCode.E))
         //    ////transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
         //    //transform.rotation = Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
+
+       //Zoom
+        targetZoom -= Input.mouseScrollDelta.y * sensitivity;
+        targetZoom = Mathf.Clamp(targetZoom, maxZoom, minZoom);
+        float newSize = Mathf.MoveTowards(cam.orthographicSize, targetZoom, speed * Time.deltaTime);
+        cam.orthographicSize = newSize;
+
     }
 
     void MoveCamera(float x, float y, float z)

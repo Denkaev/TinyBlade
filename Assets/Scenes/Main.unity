@@ -257,6 +257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f9a9beeeff4e7479ba45ae1f8b644b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 519420031}
+  maxZoom: 5
+  minZoom: 20
+  sensitivity: 1
   speed: 10
   player: {fileID: 922560767}
 --- !u!20 &519420031

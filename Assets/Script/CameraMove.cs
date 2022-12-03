@@ -31,6 +31,15 @@ public class CameraMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            offset.x = transform.position.x - player.transform.position.x;
+            offset.y = transform.position.y - player.transform.position.y;
+            offset.y = transform.position.z;
+            newtrans = Vector3.MoveTowards(transform.position, offset, speed);
+            GetComponent<Rigidbody2D>().MovePosition(newtrans);
+        }
+        
         //if (GlobalVariables.FreeCam)
         //{
         //    newtrans.x = player.transform.position.x + offset.x;
@@ -90,7 +99,7 @@ public class CameraMove : MonoBehaviour
         //    ////transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
         //    //transform.rotation = Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
 
-       //Zoom
+        //Zoom
         targetZoom -= Input.mouseScrollDelta.y * sensitivity;
         targetZoom = Mathf.Clamp(targetZoom, maxZoom, minZoom);
         float newSize = Mathf.MoveTowards(cam.orthographicSize, targetZoom, speed * Time.deltaTime);
@@ -103,6 +112,9 @@ public class CameraMove : MonoBehaviour
         Vector3 movementAmount = new Vector3(x, y, z) * speed * Time.deltaTime;
         transform.Translate(movementAmount);
         if (!(z == 0))
-        transform.Translate(Vector3.forward * z);
+            transform.Translate(Vector3.forward * z);
     }
+
+
+
 }

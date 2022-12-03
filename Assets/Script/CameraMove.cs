@@ -11,6 +11,9 @@ public class CameraMove : MonoBehaviour
     public float minZoom = 20;
     public float sensitivity = 1;
     float targetZoom;
+    //Rotate
+    private bool rotateCam = false;
+    private float rotateSpeed = 0f;
 
     [SerializeField]
     private float speed = 25f;
@@ -31,15 +34,18 @@ public class CameraMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            offset.x = transform.position.x - player.transform.position.x;
-            offset.y = transform.position.y - player.transform.position.y;
-            offset.y = transform.position.z;
-            newtrans = Vector3.MoveTowards(transform.position, offset, speed);
-            GetComponent<Rigidbody2D>().MovePosition(newtrans);
-        }
-        
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
+        //    offset.x = transform.position.x - player.transform.position.x;
+        //    offset.y = transform.position.y - player.transform.position.y;
+        //    offset.y = transform.position.z;
+        //    newtrans = Vector3.MoveTowards(transform.position, offset, speed);
+        //    GetComponent<Rigidbody2D>().MovePosition(newtrans);
+        //}
+
+        if(rotateCam)
+        transform.Rotate(0f, 0f, rotateSpeed, Space.World);
+
         //if (GlobalVariables.FreeCam)
         //{
         //    newtrans.x = player.transform.position.x + offset.x;
@@ -104,6 +110,21 @@ public class CameraMove : MonoBehaviour
         targetZoom = Mathf.Clamp(targetZoom, maxZoom, minZoom);
         float newSize = Mathf.MoveTowards(cam.orthographicSize, targetZoom, speed * Time.deltaTime);
         cam.orthographicSize = newSize;
+        //Rotate
+        if (Input.GetKey(KeyCode.Q))
+        {
+            rotateCam = true;
+            rotateSpeed = 1f;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            rotateCam = true;
+            rotateSpeed = -1f;
+        }
+        if (Input.GetKeyUp(KeyCode.Q))
+            rotateCam = false;
+        if (Input.GetKeyUp(KeyCode.E))
+            rotateCam = false;
 
     }
 
@@ -114,7 +135,4 @@ public class CameraMove : MonoBehaviour
         if (!(z == 0))
             transform.Translate(Vector3.forward * z);
     }
-
-
-
 }

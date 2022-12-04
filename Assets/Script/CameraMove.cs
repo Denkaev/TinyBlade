@@ -14,6 +14,7 @@ public class CameraMove : MonoBehaviour
     //Rotate
     private bool rotateCam = false;
     private float rotateSpeed = 0f;
+    private float rotateAngle; 
 
     [SerializeField]
     private float speed = 25f;
@@ -30,6 +31,7 @@ public class CameraMove : MonoBehaviour
         offset.x = transform.position.x - player.transform.position.x;
         offset.y = transform.position.y - player.transform.position.y;
         newtrans = transform.position;
+        rotateAngle = transform.rotation.z;
     }
 
     private void FixedUpdate()
@@ -95,8 +97,7 @@ public class CameraMove : MonoBehaviour
 
     private void Update()
     {
-        MoveCamera(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), Input.GetAxis("Mouse ScrollWheel"));
-
+        MoveCamera(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         //if (GlobalVariables.RotateTimer > 0)
         //    transform.Rotate(0f, 0f, GlobalVariables.RotateCam, Space.World);
         //        //transform.rotation *= Quaternion.Euler(0f, 50f * Time.deltaTime, 0f);
@@ -104,7 +105,17 @@ public class CameraMove : MonoBehaviour
         //    //else if (Input.GetKey(KeyCode.E))
         //    ////transform.rotation *= Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
         //    //transform.rotation = Quaternion.Euler(0f, -50f * Time.deltaTime, 0f);
-
+        //Home
+        if (Input.GetKey(KeyCode.H))
+        {
+            //Что не так ?
+          //  MoveCamera(player.transform.position.x, player.transform.position.y);
+            //Повернуть как было
+            //cam.transform.Rotate(transform.rotation.x, transform.rotation.y, rotateAngle, Space.World);
+//            transform.Rotate(0f, 0f, 0f, Space.World);
+            transform.rotation = Quaternion.Euler(0, 0, rotateAngle);
+            //Debug.Log("Presed H");
+        }
         //Zoom
         targetZoom -= Input.mouseScrollDelta.y * sensitivity;
         targetZoom = Mathf.Clamp(targetZoom, maxZoom, minZoom);
@@ -125,14 +136,13 @@ public class CameraMove : MonoBehaviour
             rotateCam = false;
         if (Input.GetKeyUp(KeyCode.E))
             rotateCam = false;
-
     }
 
-    void MoveCamera(float x, float y, float z)
+    void MoveCamera(float x, float y)
     {
-        Vector3 movementAmount = new Vector3(x, y, z) * speed * Time.deltaTime;
+        Vector3 movementAmount = new Vector3(x, y, 0f) * speed * Time.deltaTime;
         transform.Translate(movementAmount);
-        if (!(z == 0))
-            transform.Translate(Vector3.forward * z);
+        //if (!(z == 0))
+        //    transform.Translate(Vector3.forward * z);
     }
 }

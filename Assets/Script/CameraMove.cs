@@ -14,7 +14,7 @@ public class CameraMove : MonoBehaviour
     //Rotate
     private bool rotateCam = false;
     private float rotateSpeed = 0f;
-    private float rotateAngle; 
+    private float rotateAngle;
 
     [SerializeField]
     private float speed = 25f;
@@ -23,6 +23,9 @@ public class CameraMove : MonoBehaviour
     private GameObject player;
     private Vector3 offset;
     private Vector3 newtrans;
+    //Home
+    private bool GoHome = false;
+    private float speedHome = 30f; 
     void Start()
     {
         targetZoom = cam.orthographicSize;
@@ -115,6 +118,17 @@ public class CameraMove : MonoBehaviour
 //            transform.Rotate(0f, 0f, 0f, Space.World);
             transform.rotation = Quaternion.Euler(0, 0, rotateAngle);
             //Debug.Log("Presed H");
+            GoHome = true;
+        }
+        if (GoHome)
+        {
+            var step = speedHome * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
+            if (Vector3.Distance(transform.position, player.transform.position) < 0.001f)
+            {
+//                player.transform.position *= -1.0f;
+                GoHome = false;
+            }
         }
         //Zoom
         targetZoom -= Input.mouseScrollDelta.y * sensitivity;

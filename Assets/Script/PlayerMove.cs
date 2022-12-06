@@ -7,7 +7,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private float speed = 1f;
     private Vector3 target;
-
+    
 
     void Start()
     {
@@ -16,16 +16,29 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            target.z = transform.position.z;
-            GlobalVariables.FreeCam = true;
-        }
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            if (Input.GetMouseButtonDown(1))
+            {
+                target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                target.z = transform.position.z;
+                GlobalVariables.FreeCam = true;
+            }
+                transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    
         if (Input.GetMouseButtonUp(1))
-        {
-            GlobalVariables.FreeCam = false;
-        }
+            {
+                GlobalVariables.FreeCam = false;
+            }
+    }
+    //bool valid(Vector2 dir)
+    //{
+    //    Vector2 pos = transform.position;
+    //    RaycastHit2D hit = Physics2D.Linecast(pos + dir, pos);
+    //    return (hit.collider == GetComponent<Collider2D>());
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "EndMapLeft")
+            transform.position = transform.position + Vector3.right;
     }
 }

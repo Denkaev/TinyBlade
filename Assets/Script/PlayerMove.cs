@@ -29,13 +29,6 @@ public class PlayerMove : MonoBehaviour
                 GlobalVariables.FreeCam = false;
             }
     }
-    //bool valid(Vector2 dir)
-    //{
-    //    Vector2 pos = transform.position;
-    //    RaycastHit2D hit = Physics2D.Linecast(pos + dir, pos);
-    //    return (hit.collider == GetComponent<Collider2D>());
-    //}
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "EndMapLeft")

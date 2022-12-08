@@ -21,8 +21,8 @@ public class CameraMove : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField]
     private GameObject player;
-    private Vector3 offset;
-    private Vector3 newtrans;
+    //private Vector3 offset;
+    //private Vector3 newtrans;
     //Home
     private bool GoHome = false;
     private float speedHome = 30f;
@@ -31,9 +31,9 @@ public class CameraMove : MonoBehaviour
         targetZoom = cam.orthographicSize;
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
-        offset.x = transform.position.x - player.transform.position.x;
-        offset.y = transform.position.y - player.transform.position.y;
-        newtrans = transform.position;
+        //offset.x = transform.position.x - player.transform.position.x;
+        //offset.y = transform.position.y - player.transform.position.y;
+        //newtrans = transform.position;
         rotateAngle = transform.rotation.z;
     }
 

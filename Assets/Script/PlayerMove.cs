@@ -29,9 +29,9 @@ public class PlayerMove : MonoBehaviour
                 GlobalVariables.FreeCam = false;
             }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.name == "EndMapLeft")
-            transform.position = transform.position + Vector3.right;
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.name == "EndMapLeft")
+    //        transform.position = transform.position + Vector3.right;
+    //}
 }

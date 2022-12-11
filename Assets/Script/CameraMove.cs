@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class CameraMove : MonoBehaviour
@@ -58,10 +60,9 @@ public class CameraMove : MonoBehaviour
         }
         if (GoHome)
         {
-            var step = speedHome * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, destCam, step);
+            transform.position = Vector3.MoveTowards(transform.position, destCam, speedHome * Time.deltaTime);
             //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-            if (Vector3.Distance(transform.position, player.transform.position) < 0.001f)
+            if (Vector3.Distance(transform.position, player.transform.position) < 0.001f + Math.Abs(transform.position.z - player.transform.position.z))
             {
                 GoHome = false;
             }

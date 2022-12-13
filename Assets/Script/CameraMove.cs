@@ -61,7 +61,6 @@ public class CameraMove : MonoBehaviour
         if (GoHome)
         {
             transform.position = Vector3.MoveTowards(transform.position, destCam, speedHome * Time.deltaTime);
-            //transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
             if (Vector3.Distance(transform.position, player.transform.position) < 0.001f + Math.Abs(transform.position.z - player.transform.position.z))
             {
                 GoHome = false;

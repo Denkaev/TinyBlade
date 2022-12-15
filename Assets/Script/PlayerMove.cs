@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Bum");
+        //Debug.Log("Bum");
         target = transform.position;
         //rb.velocity = Vector3.zero;
         //transform.position = Vector3.zero;

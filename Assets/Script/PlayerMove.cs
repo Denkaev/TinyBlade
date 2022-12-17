@@ -25,8 +25,9 @@ public class PlayerMove : MonoBehaviour
             target.z = transform.position.z;
             GlobalVariables.FreeCam = true;
         }
+        //как узнать что у нас колизия ?
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
+        
         if (Input.GetMouseButtonUp(1))
         {
             GlobalVariables.FreeCam = false;

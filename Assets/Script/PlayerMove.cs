@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 1f;
+    private float speed = 10f;
     private Vector3 target;
     private Vector2 destinct;
     private bool playerGo = false;
@@ -34,7 +34,14 @@ public class PlayerMove : MonoBehaviour
         }
         //как узнать что у нас колизия ?
         //transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
+        if (playerGo)
+        {
+            rb.MovePosition(Vector2.MoveTowards(transform.position, destinct, speed * Time.deltaTime));
+            if (Vector2.Distance(transform.position, destinct) < 0.01)
+            {
+                playerGo = false;
+            }
+        }
         if (Input.GetMouseButtonUp(1))
         {
             GlobalVariables.FreeCam = false;
@@ -44,14 +51,6 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         //rb.AddForce(destinct);
-        if (playerGo)
-        {
-            rb.MovePosition(Vector2.MoveTowards(transform.position, destinct, speed));
-            if (Vector2.Distance(transform.position, destinct) < 0.01)
-            {
-                playerGo = false;
-            }
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -435,7 +435,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u0435\u0445\u043E\u0442\u0438\u043D\u0435\u0446"
+  m_Text: INFANTRY
 --- !u!222 &197475223
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &322707634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -742,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &630651456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -915,7 +915,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0435\u043C\u043D\u0438\u043A\u0438"
+  m_Text: "MER\u0421ENARIES"
 --- !u!222 &663606330
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -994,7 +994,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u0441\u0430\u0434\u043D\u0438\u043A"
+  m_Text: RIDERS
 --- !u!222 &808803978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1254,7 +1254,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0421\u0442\u0440\u0435\u043B\u043E\u043A"
+  m_Text: LONG RANGE
 --- !u!222 &1113796622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1281,7 +1281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1287555175
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1753,7 +1753,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u044B\u0445\u043E\u0434"
+  m_Text: EXIT
 --- !u!222 &1699044838
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1832,7 +1832,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u043E\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+  m_Text: BUILDING
 --- !u!222 &1991537533
 CanvasRenderer:
   m_ObjectHideFlags: 0

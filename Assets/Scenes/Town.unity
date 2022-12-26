@@ -269,6 +269,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildsButtons:
+  - {fileID: 630651455}
+  - {fileID: 1287555174}
+  MercenariesButtons:
+  - {fileID: 322707633}
 --- !u!1 &174039414
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildsButtons: []
+  MercenariesButtons: []
 --- !u!1 &197475220
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildsButtons: []
+  MercenariesButtons: []
 --- !u!1 &610988568
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildsButtons: []
+  MercenariesButtons: []
 --- !u!1 &663606327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildsButtons: []
+  MercenariesButtons: []
 --- !u!1 &1360083552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1632,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BuildsButtons:
+  - {fileID: 630651455}
+  - {fileID: 1287555174}
+  MercenariesButtons:
+  - {fileID: 322707633}
 --- !u!1 &1366009396
 GameObject:
   m_ObjectHideFlags: 0

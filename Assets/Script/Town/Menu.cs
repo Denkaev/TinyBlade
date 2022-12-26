@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menu
+public class Menu: MonoBehaviour
 {
+    //.SetActive(!Levels.activeSelf);
     public void Building()
     {
         Debug.Log("Building");
     }
 
-    public void Quit()
+    public void Exit()
     {
-        //Need check for editor
-        Debug.Log("Quit!");
-        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
     }
+
     public void Mercenaries()
     {
         Debug.Log("Mercenaries");

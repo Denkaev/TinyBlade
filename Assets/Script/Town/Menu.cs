@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Menu: MonoBehaviour
 {
-    public List<GameObject> BuildsButtons = new List<GameObject>();
-    public List<GameObject> MercenariesButtons = new List<GameObject>();
+
+    public Listes listes;
+    //public List<GameObject> BuildsButtons = new List<GameObject>();
+    //public List<GameObject> MercenariesButtons = new List<GameObject>();
     //.SetActive(!Levels.activeSelf);
-    //Ќужно вынести листы куда-то в общее место
     public void Building()
     {
-        BuildsButtons.ForEach(b => b.SetActive(true));
-        MercenariesButtons.ForEach(b => b.SetActive(false));
+
+        listes.BuildsButtons.ForEach(b => b.SetActive(true));
+        listes.MercenariesButtons.ForEach(b => b.SetActive(false));
+        //BuildsButtons.ForEach(b => b.SetActive(true));
+        //MercenariesButtons.ForEach(b => b.SetActive(false));
     }
 
     public void Exit()
@@ -25,8 +29,11 @@ public class Menu: MonoBehaviour
 
     public void Mercenaries()
     {
-        BuildsButtons.ForEach(b => b.SetActive(false));
-        MercenariesButtons.ForEach(b => b.SetActive(true));
+        listes.BuildsButtons.ForEach(b => b.SetActive(false));
+        listes.MercenariesButtons.ForEach(b => b.SetActive(true));
+
+        //BuildsButtons.ForEach(b => b.SetActive(false));
+        //MercenariesButtons.ForEach(b => b.SetActive(true));
     }
 
     public void Invert(List<GameObject> Buttons)

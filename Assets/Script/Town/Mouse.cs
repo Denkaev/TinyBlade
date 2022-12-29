@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mouse : MonoBehaviour
 {
-    public Renderer rend;
+    public  Renderer rend;
 
     void Start()
     {

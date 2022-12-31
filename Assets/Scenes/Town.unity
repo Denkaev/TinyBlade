@@ -722,10 +722,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 322707633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f515e7495bf36e543bd738ea5bdd8e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listes: {fileID: 0}
+  farm: {fileID: 103386665}
 --- !u!1 &501507783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,10 +1095,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 630651455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f515e7495bf36e543bd738ea5bdd8e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listes: {fileID: 0}
+  farm: {fileID: 103386665}
 --- !u!1 &663606327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,10 +1830,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287555174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f515e7495bf36e543bd738ea5bdd8e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listes: {fileID: 0}
+  farm: {fileID: 103386665}
 --- !u!1 &1360083552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,10 +2093,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1405241053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f515e7495bf36e543bd738ea5bdd8e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listes: {fileID: 0}
+  farm: {fileID: 103386665}
 --- !u!114 &1405241055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2422,10 +2422,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788812234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f515e7495bf36e543bd738ea5bdd8e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listes: {fileID: 0}
+  farm: {fileID: 103386665}
 --- !u!114 &1788812237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2469,19 +2469,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1788812238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 103386665}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1788812238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,10 +2557,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986798191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
+  m_Script: {fileID: 11500000, guid: f515e7495bf36e543bd738ea5bdd8e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listes: {fileID: 0}
+  farm: {fileID: 103386665}
 --- !u!114 &1986798194
 MonoBehaviour:
   m_ObjectHideFlags: 0

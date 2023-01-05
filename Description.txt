@@ -83,3 +83,6 @@
 20230103 Бесплатная рамка для 3D объектов - пока сделать в отдельном проекте
 	https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/outline-effect-78608
 	Когда закончу город попробую бой сделать через бота нейросети
+	рамку прийдется отложить
+
+		

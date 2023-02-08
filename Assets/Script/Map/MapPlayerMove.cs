@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMove : MonoBehaviour
+public class MapPlayerMove : MonoBehaviour
 {
     [SerializeField]
     private float speed = 10f;
@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
         {
             //target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //target.z = transform.position.z;
-            GlobalVariables.FreeCam = true;
+            MapGlobalVariables.FreeCam = true;
             //destinct.Set(target.x, target.y);
             destinct = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             playerGo = true;
@@ -44,7 +44,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(1))
         {
-            GlobalVariables.FreeCam = false;
+            MapGlobalVariables.FreeCam = false;
         }
     }
 

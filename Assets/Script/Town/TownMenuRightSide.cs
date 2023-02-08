@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuRightSide : MonoBehaviour
+public class TownMenuRightSide : MonoBehaviour
 {
     [SerializeField]
     private GameObject farm;

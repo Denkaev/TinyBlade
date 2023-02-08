@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class CameraMove : MonoBehaviour
+public class MapCameraMove : MonoBehaviour
 {
     //Zoom
     public Camera cam;

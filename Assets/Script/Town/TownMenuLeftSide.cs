@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menu: MonoBehaviour
+public class TownMenu: MonoBehaviour
 {
 
-    public Listes listes;
+    public TownListes listes;
     //public List<GameObject> BuildsButtons = new List<GameObject>();
     //public List<GameObject> MercenariesButtons = new List<GameObject>();
     //.SetActive(!Levels.activeSelf);

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IninsializeVariable : MonoBehaviour
+public class MapIninsializeVariable : MonoBehaviour
 {
     void Awake()
     {
-        GlobalVariables.FreeCam = true;
+        MapGlobalVariables.FreeCam = true;
     }
 
 }

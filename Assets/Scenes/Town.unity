@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listes: {fileID: 928497574}
 --- !u!1 &103386665
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listes: {fileID: 0}
 --- !u!1 &197475220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,12 +1971,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1360083557}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+        m_TargetAssemblyTypeName: TownMenuLeftSide, Assembly-CSharp
+        m_MethodName: Building
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2027,10 +2029,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360083552}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f515e7495bf36e543bd738ea5bdd8e22, type: 3}
+  m_Script: {fileID: 11500000, guid: 24245fef4554e904c9cc1116f1a0c0d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  farm: {fileID: 103386665}
+  listes: {fileID: 928497574}
 --- !u!1 &1366009396
 GameObject:
   m_ObjectHideFlags: 0

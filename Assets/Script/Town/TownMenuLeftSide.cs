@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TownMenu: MonoBehaviour
+public class TownMenuLeftSide : MonoBehaviour
 {
 
     public TownListes listes;

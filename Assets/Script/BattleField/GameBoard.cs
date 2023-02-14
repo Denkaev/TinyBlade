@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class GameBoard : MonoBehaviour
 {
-
     [SerializeField]
     Transform ground = default;
     [SerializeField]
@@ -25,6 +24,5 @@ public class GameBoard : MonoBehaviour
                 tile.transform.localPosition = new Vector3(x - offset.x, 0f, y - offset.y);
             }
         }
-
     }
 }

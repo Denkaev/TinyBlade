@@ -76,13 +76,13 @@ public class BFMove : MonoBehaviour
         if (y > 0)
             if (moveUnit)
             {
-                dest = (Vector3)transform.position + Vector3.up;
+                dest = (Vector3)transform.position + Vector3.forward;
                 moveUnit = false;
             }
         if (y < 0)
             if (moveUnit)
             {
-                dest = (Vector3)transform.position + Vector3.down;
+                dest = (Vector3)transform.position + Vector3.back;
                 moveUnit = false;
             }
         if (x < 0)

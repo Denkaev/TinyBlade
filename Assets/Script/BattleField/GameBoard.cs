@@ -1,14 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameBoard : MonoBehaviour
 {
-    [SerializeField]
-    Transform ground = default;
-    [SerializeField]
-    GameTile tilePrefab = default;
+    [SerializeField] private Transform ground = default;
+    [SerializeField] private GameTile tilePrefab = default;
+    [SerializeField] private List<GameTile> tilePrefabList;
+    [SerializeField] private List<int> tilePrefabFrequency;
+    private List<int> ComulativeProbability;
     Vector2Int size;
-    //Недостаточно разделить на двумерный массив, надо хранить в нем тип тайла и при генерации добавить шанс применения каждого тайла
     GameTile[][] tiles;
+    private int summa = 0;
+
+    private void Start()
+    {
+        for (int i = 0; i >= tilePrefabList.Count; i++)
+        {
+            summa = summa + tilePrefabFrequency[i];
+            //Надо бы проверку тут что tilePrefabFrequency не короче tilePrefabList
+            ComulativeProbability.Add(summa);
+        }
+    }
 
     public void Initialize(Vector2Int size)
     {
@@ -21,10 +34,25 @@ public class GameBoard : MonoBehaviour
             tiles[y] = new GameTile[size.x];
             for (int x = 0; x < size.x; x++, i++)
             {
-                GameTile tile = tiles[y][x] = Instantiate(tilePrefab);
+      //          GameTile tile = tiles[y][x] = Instantiate(tilePrefab);
+                GameTile tile = tiles[y][x] = Instantiate(RandomTilePrefab());
                 tile.transform.SetParent(transform, false);
                 tile.transform.localPosition = new Vector3(x - offset.x, 0f, y - offset.y);
             }
         }
+    }
+
+    GameTile RandomTilePrefab()
+    {
+        GameTile RandomTile = tilePrefab;
+        int RandomTileNumber = Random.Range(0, summa);
+        //Надо бы проверку что все списки одной длинны
+        for (int i = 0; i >= tilePrefabList.Count; i++)
+        {
+            if (RandomTileNumber <= ComulativeProbability[i])
+                RandomTile =  tilePrefabList[i];
+        }
+        //На случай ошибки
+        return RandomTile;
     }
 }

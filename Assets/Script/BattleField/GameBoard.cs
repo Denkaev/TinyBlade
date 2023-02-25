@@ -6,25 +6,31 @@ public class GameBoard : MonoBehaviour
 {
     [SerializeField] private Transform ground = default;
     [SerializeField] private GameTile tilePrefab = default;
-    [SerializeField] private List<GameTile> tilePrefabList;
-    [SerializeField] private List<int> tilePrefabFrequency;
-    private List<int> ComulativeProbability;
-    Vector2Int size;
+    [SerializeField] private List<GameTile> tilePrefabList = new List<GameTile>();
+    [SerializeField] private List<int> tilePrefabFrequency = new List<int>();
+    private List<int> ComulativeProbability = new List<int>();
+    Vector2Int size = default;
     GameTile[][] tiles;
     private int summa = 0;
 
-    private void Start()
+    //private void Awake()
+    //{
+    //    for (int i = 0; i <= tilePrefabList.Count; i++)
+    //    {
+    //        summa = summa + tilePrefabFrequency[i];
+    //        //Надо бы проверку тут что tilePrefabFrequency не короче tilePrefabList
+    //        ComulativeProbability.Add(summa);
+    //    }
+    //}
+
+    public void Initialize(Vector2Int size)
     {
-        for (int i = 0; i >= tilePrefabList.Count; i++)
+        for (int i = 0; i < tilePrefabList.Count; i++)
         {
             summa = summa + tilePrefabFrequency[i];
             //Надо бы проверку тут что tilePrefabFrequency не короче tilePrefabList
             ComulativeProbability.Add(summa);
         }
-    }
-
-    public void Initialize(Vector2Int size)
-    {
         this.size = size;
         ground.localScale = new Vector3(size.x, size.y, 1f);
         Vector2 offset = new Vector2((size.x - 1) * 0.5f, (size.y - 1) * 0.5f);
@@ -47,10 +53,14 @@ public class GameBoard : MonoBehaviour
         GameTile RandomTile = tilePrefab;
         int RandomTileNumber = Random.Range(0, summa);
         //Надо бы проверку что все списки одной длинны
-        for (int i = 0; i >= tilePrefabList.Count; i++)
+        for (int i = 0; i < tilePrefabList.Count; i++)
         {
             if (RandomTileNumber <= ComulativeProbability[i])
-                RandomTile =  tilePrefabList[i];
+            {
+                RandomTile = tilePrefabList[i];
+                break;
+            }
+              
         }
         //На случай ошибки
         return RandomTile;

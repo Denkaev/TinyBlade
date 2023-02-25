@@ -3,6 +3,6 @@ using UnityEngine;
 public class GameTile : MonoBehaviour
 {
 
-    [SerializeField]
-    Transform arrow = default;
+    //[SerializeField]
+    //Transform arrow = default;
 }

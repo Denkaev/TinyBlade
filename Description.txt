@@ -152,4 +152,8 @@
 				Три
 20230226
 +	Случайный TileMap из 5 Tiles
-			
+20230227
+	Панель для расстановки юнитов
+		Пример 
+			C:\Unity\PrototipPavel-main\Assets\Scripts\DeathItemSpawner.cs
+		

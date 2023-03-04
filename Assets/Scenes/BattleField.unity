@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 183405455}
   - component: {fileID: 183405454}
   m_Layer: 5
-  m_Name: GameObject (2)
+  m_Name: UnitThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 1287685309}
   - component: {fileID: 1287685308}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: UnitOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1285,7 +1285,7 @@ GameObject:
   - component: {fileID: 1645700575}
   - component: {fileID: 1645700574}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: UnitTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,7 +34,7 @@ public class DragAndDropHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
 
         if (RectTransformUtility.RectangleContainsScreenPoint(fieldRectTransform, eventData.position))
         {
-            rectTransform.SetParent(/* установить родительский объект на поле */);
+            //rectTransform.SetParent(/* установить родительский объект на поле */);
             rectTransform.anchoredPosition = localPoint;
         }
         else

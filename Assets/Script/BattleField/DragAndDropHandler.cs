@@ -28,18 +28,18 @@ public class DragAndDropHandler : MonoBehaviour, IBeginDragHandler, IDragHandler
     {
         canvasGroup.blocksRaycasts = true;
 
-        RectTransform fieldRectTransform = /* получить RectTransform поля */;
-        Vector2 localPoint;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(fieldRectTransform, eventData.position, null, out localPoint);
+        //    RectTransform fieldRectTransform = /* получить RectTransform поля */;
+        //    Vector2 localPoint;
+        //    RectTransformUtility.ScreenPointToLocalPointInRectangle(fieldRectTransform, eventData.position, null, out localPoint);
 
-        if (RectTransformUtility.RectangleContainsScreenPoint(fieldRectTransform, eventData.position))
-        {
-            //rectTransform.SetParent(/* установить родительский объект на поле */);
-            rectTransform.anchoredPosition = localPoint;
-        }
-        else
-        {
-            rectTransform.anchoredPosition = startPosition;
-        }
+        //    if (RectTransformUtility.RectangleContainsScreenPoint(fieldRectTransform, eventData.position))
+        //    {
+        //        //rectTransform.SetParent(/* установить родительский объект на поле */);
+        //        rectTransform.anchoredPosition = localPoint;
+        //    }
+        //    else
+        //    {
+        //        rectTransform.anchoredPosition = startPosition;
+        //    }
     }
 }

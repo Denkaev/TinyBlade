@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject unitPrefab;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-
+    private GameObject prefabCurrent;
 
     private void Awake()
     {
@@ -18,6 +18,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        prefabCurrent = Instantiate(unitPrefab,rectTransform);
         Debug.Log("OnBeginDrag");
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
@@ -34,6 +35,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
+        Destroy(prefabCurrent);
     }
 
     public void OnPointerDown(PointerEventData eventData)

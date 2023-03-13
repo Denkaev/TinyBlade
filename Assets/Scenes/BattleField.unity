@@ -266,8 +266,8 @@ GameObject:
   - component: {fileID: 183405453}
   - component: {fileID: 183405455}
   - component: {fileID: 183405454}
-  - component: {fileID: 183405457}
   - component: {fileID: 183405456}
+  - component: {fileID: 183405457}
   m_Layer: 5
   m_Name: UnitThree
   m_TagString: Untagged
@@ -354,10 +354,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 183405452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf5345bf677f7f4e8a1e265bdabcfd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d65ccd84f581af4b8e55795eddb481d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 300177505}
+  unitPrefab: {fileID: 1046962797519111566, guid: 053527a4f0bad5a47b554328a118cfe6, type: 3}
 --- !u!1 &217537243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,8 +1347,8 @@ GameObject:
   - component: {fileID: 1287685307}
   - component: {fileID: 1287685309}
   - component: {fileID: 1287685308}
-  - component: {fileID: 1287685310}
   - component: {fileID: 1287685311}
+  - component: {fileID: 1287685310}
   m_Layer: 5
   m_Name: UnitOne
   m_TagString: Untagged
@@ -1422,10 +1423,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1287685306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf5345bf677f7f4e8a1e265bdabcfd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d65ccd84f581af4b8e55795eddb481d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 300177505}
+  unitPrefab: {fileID: 3184428490944885890, guid: 260e3fc2e1ce2d44dae5760e13bedd41, type: 3}
 --- !u!225 &1287685311
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1577,8 +1579,8 @@ GameObject:
   - component: {fileID: 1645700573}
   - component: {fileID: 1645700575}
   - component: {fileID: 1645700574}
-  - component: {fileID: 1645700577}
   - component: {fileID: 1645700576}
+  - component: {fileID: 1645700577}
   m_Layer: 5
   m_Name: UnitTwo
   m_TagString: Untagged
@@ -1665,10 +1667,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1645700572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf5345bf677f7f4e8a1e265bdabcfd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d65ccd84f581af4b8e55795eddb481d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 300177505}
+  unitPrefab: {fileID: 1008286978732416769, guid: 4f080358bf8330b4f8e5006451fbe77f, type: 3}
 --- !u!1 &1665066817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,8 +1788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.5, y: 0}
-  m_SizeDelta: {x: 1, y: 100}
+  m_AnchoredPosition: {x: 0.5, y: -485.2}
+  m_SizeDelta: {x: 1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760144822
 MonoBehaviour:

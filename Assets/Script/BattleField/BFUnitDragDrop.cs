@@ -10,6 +10,11 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private GameObject prefabCurrent;
+    //Ray TouchRay => Camera.main.ScreenPointToRay(Input.mousePosition);
+    //new version
+    Ray MyRay;
+    RaycastHit hit;
+
 
     private void Awake()
     {
@@ -18,18 +23,32 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Vector3 mousePosition = Input.mousePosition;
-        //mousePosition.y = Camera.main.transform.position.y;
-        mousePosition.y = -2f;
-        //Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        //GPT не шарит в Unity
-        Vector3 worldPosition = Camera.main.ScreenToViewportPoint(mousePosition);
+        //Vector3 mousePosition = Input.mousePosition;
+        ////mousePosition.y = Camera.main.transform.position.y;
+        //mousePosition.y = -2f;
+        ////Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        ////GPT не шарит в Unity
+        //Vector3 worldPosition = Camera.main.ScreenToViewportPoint(mousePosition);
 
-        prefabCurrent = Instantiate(unitPrefab, worldPosition, Quaternion.identity);
-        
+        //prefabCurrent = Instantiate(unitPrefab, worldPosition, Quaternion.identity);
+
         Debug.Log("OnBeginDrag");
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
+
+        //new version
+        //MyRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Debug.DrawRay(MyRay.origin, MyRay.direction * 10, Color.yellow);
+        //if (Physics.Raycast(MyRay, out hit, 100))
+        //{
+        //    MeshFilter filter = hit.collider.GetComponent(typeof(MeshFilter)) as MeshFilter;
+        //    if (filter)
+        //    {
+        //        //имя обьекта по которому щелкнули мышей               
+        //        Debug.Log(filter.gameObject.name);
+
+        //    }
+        //}
 
     }
 
@@ -45,6 +64,21 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
         //Destroy(prefabCurrent);
+        
+        //new version
+        MyRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(MyRay.origin, MyRay.direction * 10, Color.yellow);
+        if (Physics.Raycast(MyRay, out hit, 100))
+        {
+            MeshFilter filter = hit.collider.GetComponent(typeof(MeshFilter)) as MeshFilter;
+            if (filter)
+            {
+                //имя обьекта по которому щелкнули мышей               
+                Debug.Log(filter.gameObject.name);
+                Instantiate(unitPrefab, filter.transform.position, Quaternion.identity);
+
+            }
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

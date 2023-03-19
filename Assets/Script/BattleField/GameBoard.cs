@@ -10,7 +10,7 @@ public class GameBoard : MonoBehaviour
     [SerializeField] private List<int> tilePrefabFrequency = new List<int>();
     private List<int> ComulativeProbability = new List<int>();
     Vector2Int size = default;
-    GameTile[][] tiles;
+    public GameTile[][] tiles;
     private int summa = 0;
 
     //private void Awake()

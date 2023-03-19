@@ -64,7 +64,7 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
         //Destroy(prefabCurrent);
-        
+
         //new version
         MyRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(MyRay.origin, MyRay.direction * 10, Color.yellow);
@@ -90,4 +90,27 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     {
         throw new System.NotImplementedException();
     }
-}
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            HandleTouch();
+        }
+    }
+    void HandleTouch()
+    {
+        //GameTile tile = board.GetTile(TouchRay);
+        //if (tile != null)
+        //{
+        //    if (Input.GetKey(KeyCode.LeftShift))
+        //    {
+        //        board.ToggleTower(tile, selectedTowerType);
+        //    }
+        //    else
+        //    {
+        //        board.ToggleWall(tile);
+        //    }
+        //}
+    }
+       }

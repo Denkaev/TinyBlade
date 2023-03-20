@@ -65,4 +65,23 @@ public class GameBoard : MonoBehaviour
         //Ќа случай ошибки
         return RandomTile;
     }
+
+    public GameTile GetTile(Ray ray)
+    {
+        if (Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, 1))
+        {
+            //size размер пол€ и получение тайла нужного
+            //однако у нас поле разбито на двумерный массив и по идее нам легче получить нужную плитку
+            //пока берем любую
+            //int x = (int)(hit.point.x + size.x * 0.5f);
+            //int y = (int)(hit.point.z + size.y * 0.5f);
+            //if (x >= 0 && x < size.x && y >= 0 && y < size.y)
+            //{
+            //    return tiles[x + y * size.x];
+            //}
+            //return tiles[hit.point.x)][hit.point.y];
+            return tiles[2][7];
+        }
+        return null;
+    }
 }

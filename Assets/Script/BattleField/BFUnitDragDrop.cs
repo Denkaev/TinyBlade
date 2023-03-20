@@ -7,10 +7,12 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
 {
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject unitPrefab;
+    [SerializeField] private GameObject gameBord;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private GameObject prefabCurrent;
-    //Ray TouchRay => Camera.main.ScreenPointToRay(Input.mousePosition);
+    Ray TouchRay => Camera.main.ScreenPointToRay(Input.mousePosition);
+    
     //new version
     Ray MyRay;
     RaycastHit hit;
@@ -100,17 +102,13 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     }
     void HandleTouch()
     {
-        //GameTile tile = board.GetTile(TouchRay);
+        //GameTile tile = gameBord.GetTile(TouchRay);
         //if (tile != null)
         //{
-        //    if (Input.GetKey(KeyCode.LeftShift))
-        //    {
-        //        board.ToggleTower(tile, selectedTowerType);
-        //    }
-        //    else
-        //    {
-        //        board.ToggleWall(tile);
-        //    }
+        //                  gameBord.ToggleWall(tile);
         //}
     }
-       }
+
+
+
+}

@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 300177505}
   unitPrefab: {fileID: 1046962797519111566, guid: 053527a4f0bad5a47b554328a118cfe6, type: 3}
-  gameBord: {fileID: 52297208}
+  gameBord: {fileID: 52297209}
 --- !u!1 &217537243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 300177505}
   unitPrefab: {fileID: 3184428490944885890, guid: 260e3fc2e1ce2d44dae5760e13bedd41, type: 3}
-  gameBord: {fileID: 52297208}
+  gameBord: {fileID: 52297209}
 --- !u!225 &1287685311
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 300177505}
   unitPrefab: {fileID: 1008286978732416769, guid: 4f080358bf8330b4f8e5006451fbe77f, type: 3}
-  gameBord: {fileID: 52297208}
+  gameBord: {fileID: 52297209}
 --- !u!1 &1665066817
 GameObject:
   m_ObjectHideFlags: 0

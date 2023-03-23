@@ -84,5 +84,20 @@ public class GameBoard : MonoBehaviour
             return tiles[1][1];
         }
         return null;
+
+        public void ArrangeUnit(GameTile tile)
+        {
+
+        //    if (tile.Content.Type == GameTileContentType.Wall)
+        //    {
+        //        tile.Content = contentFactory.Get(GameTileContentType.Empty);
+        //                }
+        //    else if (tile.Content.Type == GameTileContentType.Empty)
+        //    {
+        //        tile.Content = contentFactory.Get(GameTileContentType.Wall);
+            
+        //    }
+        //}
+
     }
 }

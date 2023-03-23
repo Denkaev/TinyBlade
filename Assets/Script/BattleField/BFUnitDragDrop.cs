@@ -105,7 +105,7 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         GameTile tile = gameBord.GetTile(TouchRay);
         if (tile != null)
         {
-            //                  gameBord.ToggleWall(tile);
+                              gameBord.ArrangeUnit(tile);
             Debug.Log("hit");
         }
     }

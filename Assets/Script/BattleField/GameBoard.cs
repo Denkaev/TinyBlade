@@ -40,7 +40,7 @@ public class GameBoard : MonoBehaviour
             tiles[y] = new GameTile[size.x];
             for (int x = 0; x < size.x; x++, i++)
             {
-      //          GameTile tile = tiles[y][x] = Instantiate(tilePrefab);
+                //          GameTile tile = tiles[y][x] = Instantiate(tilePrefab);
                 GameTile tile = tiles[y][x] = Instantiate(RandomTilePrefab());
                 tile.transform.SetParent(transform, false);
                 tile.transform.localPosition = new Vector3(x - offset.x, 0f, y - offset.y);
@@ -60,7 +60,7 @@ public class GameBoard : MonoBehaviour
                 RandomTile = tilePrefabList[i];
                 break;
             }
-              
+
         }
         //На случай ошибки
         return RandomTile;
@@ -84,10 +84,10 @@ public class GameBoard : MonoBehaviour
             return tiles[1][1];
         }
         return null;
-
-        public void ArrangeUnit(GameTile tile)
-        {
-
+    }
+    public void ArrangeUnit(GameTile tile)
+    {
+        Debug.Log("ArrangeUnit");
         //    if (tile.Content.Type == GameTileContentType.Wall)
         //    {
         //        tile.Content = contentFactory.Get(GameTileContentType.Empty);
@@ -95,9 +95,8 @@ public class GameBoard : MonoBehaviour
         //    else if (tile.Content.Type == GameTileContentType.Empty)
         //    {
         //        tile.Content = contentFactory.Get(GameTileContentType.Wall);
-            
-        //    }
-        //}
 
+        //    }
     }
+
 }

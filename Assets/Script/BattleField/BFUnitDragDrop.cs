@@ -12,7 +12,7 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     private CanvasGroup canvasGroup;
     private GameObject prefabCurrent;
     Ray TouchRay => Camera.main.ScreenPointToRay(Input.mousePosition);
-    
+
     //new version
     Ray MyRay;
     RaycastHit hit;
@@ -105,8 +105,8 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         GameTile tile = gameBord.GetTile(TouchRay);
         if (tile != null)
         {
-                              gameBord.ArrangeUnit(tile);
-            Debug.Log("hit");
+            gameBord.ArrangeUnit(tile);
+            //Debug.Log("hit");
         }
     }
 

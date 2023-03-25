@@ -66,6 +66,7 @@ public class GameBoard : MonoBehaviour
         return RandomTile;
     }
 
+    //Получаем плитку под мышью
     public GameTile GetTile(Ray ray)
     {
         if (Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, 1))
@@ -85,6 +86,8 @@ public class GameBoard : MonoBehaviour
         }
         return null;
     }
+
+    //Размещаем юнит на указаной плитке
     public void ArrangeUnit(GameTile tile)
     {
         Debug.Log("ArrangeUnit");

@@ -74,15 +74,19 @@ public class GameBoard : MonoBehaviour
             //size размер поля и получение тайла нужного
             //однако у нас поле разбито на двумерный массив и по идее нам легче получить нужную плитку
             //пока берем любую
+            //int x = (int)(hit.point.x + size.x * 0.5f);
+            //int y = (int)(hit.point.z + size.y * 0.5f);
             int x = (int)(hit.point.x + size.x * 0.5f);
-            int y = (int)(hit.point.z + size.y * 0.5f);
+            int y = (int)(hit.point.y + size.y * 0.5f);
+
             //if (x >= 0 && x < size.x && y >= 0 && y < size.y)
             //{
             //    return tiles[x + y * size.x];
             //}
             //return tiles[hit.point.x)][hit.point.y];
-            //return tiles[x][y];
-            return tiles[1][1];
+            Debug.Log("x:" + x + "y:" + y);
+            return tiles[x][y];
+            //return tiles[1][1];
         }
         return null;
     }

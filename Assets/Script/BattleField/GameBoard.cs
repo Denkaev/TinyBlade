@@ -46,6 +46,7 @@ public class GameBoard : MonoBehaviour
                 tile.transform.localPosition = new Vector3(x - offset.x, 0f, y - offset.y);
             }
         }
+        //Debug.Log("tile [" + tiles.Length + "][" + tiles[0].Length + "]");
     }
 
     GameTile RandomTilePrefab()
@@ -74,17 +75,16 @@ public class GameBoard : MonoBehaviour
             //size размер пол€ и получение тайла нужного
             //однако у нас поле разбито на двумерный массив и по идее нам легче получить нужную плитку
             //пока берем любую
-            //int x = (int)(hit.point.x + size.x * 0.5f);
-            //int y = (int)(hit.point.z + size.y * 0.5f);
             int x = (int)(hit.point.x + size.x * 0.5f);
-            int y = (int)(hit.point.y + size.y * 0.5f);
+            int y = (int)(hit.point.z + size.y * 0.5f);
 
             //if (x >= 0 && x < size.x && y >= 0 && y < size.y)
             //{
             //    return tiles[x + y * size.x];
             //}
             //return tiles[hit.point.x)][hit.point.y];
-            Debug.Log("x:" + x + "y:" + y);
+            //Debug.Log(" hit.x: " + hit.point.x + " hit.y: " + hit.point.y +" hit.z: " + hit.point.z);
+             //Debug.Log("x: " + x + " y: " + y);
             return tiles[x][y];
             //return tiles[1][1];
         }
@@ -94,7 +94,7 @@ public class GameBoard : MonoBehaviour
     //–азмещаем юнит на указаной плитке
     public void ArrangeUnit(GameTile tile)
     {
-        Debug.Log("ArrangeUnit");
+        //Debug.Log("ArrangeUnit");
         //    if (tile.Content.Type == GameTileContentType.Wall)
         //    {
         //        tile.Content = contentFactory.Get(GameTileContentType.Empty);

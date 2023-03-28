@@ -72,21 +72,9 @@ public class GameBoard : MonoBehaviour
     {
         if (Physics.Raycast(ray, out RaycastHit hit, float.MaxValue, 1))
         {
-            //size размер поля и получение тайла нужного
-            //однако у нас поле разбито на двумерный массив и по идее нам легче получить нужную плитку
-            //пока берем любую
             int x = (int)(hit.point.x + size.x * 0.5f);
             int y = (int)(hit.point.z + size.y * 0.5f);
-
-            //if (x >= 0 && x < size.x && y >= 0 && y < size.y)
-            //{
-            //    return tiles[x + y * size.x];
-            //}
-            //return tiles[hit.point.x)][hit.point.y];
-            //Debug.Log(" hit.x: " + hit.point.x + " hit.y: " + hit.point.y +" hit.z: " + hit.point.z);
-             //Debug.Log("x: " + x + " y: " + y);
             return tiles[x][y];
-            //return tiles[1][1];
         }
         return null;
     }
@@ -95,15 +83,10 @@ public class GameBoard : MonoBehaviour
     public void ArrangeUnit(GameTile tile)
     {
         //Debug.Log("ArrangeUnit");
-        //    if (tile.Content.Type == GameTileContentType.Wall)
-        //    {
-        //        tile.Content = contentFactory.Get(GameTileContentType.Empty);
-        //                }
-        //    else if (tile.Content.Type == GameTileContentType.Empty)
-        //    {
-        //        tile.Content = contentFactory.Get(GameTileContentType.Wall);
 
-        //    }
+        //        tile.Content = contentFactory.Get(GameTileContentType.Empty);
+        //tile.Content = contentFactory.Get(towerType);
+        //updatingContent.Add(tile.Content);
     }
 
 }

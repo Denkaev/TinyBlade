@@ -80,8 +80,11 @@ public class GameBoard : MonoBehaviour
     }
 
     //Размещаем юнит на указаной плитке
-    public void ArrangeUnit(GameTile tile)
+    public void ArrangeUnit(GameTile tile, GameObject unit)
     {
+       //Надо пересмотреть гайд по башням
+        // tile.Content = unit; - тут нужно несколько классов
+
         //Debug.Log("ArrangeUnit");
 
         //        tile.Content = contentFactory.Get(GameTileContentType.Empty);

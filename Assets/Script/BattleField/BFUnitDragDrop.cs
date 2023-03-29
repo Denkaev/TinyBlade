@@ -97,15 +97,15 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     {
         if (Input.GetMouseButtonDown(0))
         {
-            HandleTouch();
+            HandleTouch(unitPrefab);
         }
     }
-    void HandleTouch()
+    void HandleTouch(GameObject unit)
     {
         GameTile tile = gameBord.GetTile(TouchRay);
         if (tile != null)
         {
-            gameBord.ArrangeUnit(tile);
+            gameBord.ArrangeUnit(tile, unit);
             //Debug.Log("hit");
         }
     }

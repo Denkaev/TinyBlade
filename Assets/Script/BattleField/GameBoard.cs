@@ -84,7 +84,7 @@ public class GameBoard : MonoBehaviour
     {
        //Ќадо пересмотреть гайд по башн€м
         // tile.Content = unit; - тут нужно несколько классов
-
+        //Ќе понимаю как разместить в нужном месте
         //Debug.Log("ArrangeUnit");
 
         //        tile.Content = contentFactory.Get(GameTileContentType.Empty);

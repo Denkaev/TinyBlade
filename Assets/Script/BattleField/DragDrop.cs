@@ -18,31 +18,31 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //Debug.Log("OnBeginDrag");
-        //canvasGroup.alpha = 0.6f;
-        //canvasGroup.blocksRaycasts = false;
+        Debug.Log("OnBeginDrag");
+        canvasGroup.alpha = 0.6f;
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //Debug.Log("OnDrag");
-        //rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        Debug.Log("OnDrag");
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //Debug.Log("OnEndDrag");
-        //canvasGroup.blocksRaycasts = true;
-        //canvasGroup.alpha = 1f;
+        Debug.Log("OnEndDrag");
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.alpha = 1f;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        //Debug.Log("OnPointerDown");//Размер объекта не соответствует размеру страйта
+        Debug.Log("OnPointerDown");//Размер объекта не соответствует размеру страйта
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-        //throw new System.NotImplementedException();
+        throw new System.NotImplementedException();
     }
 }

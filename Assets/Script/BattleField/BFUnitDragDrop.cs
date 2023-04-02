@@ -52,7 +52,7 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
             {
                 //имя обьекта по которому щелкнули мышей               
                 Debug.Log(filter.gameObject.name);
-                Instantiate(unitPrefab, filter.transform.position, Quaternion.identity);
+              //  Instantiate(unitPrefab, filter.transform.position, Quaternion.identity);
 
             }
         }

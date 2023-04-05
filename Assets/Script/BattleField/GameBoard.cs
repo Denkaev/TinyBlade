@@ -87,7 +87,7 @@ public class GameBoard : MonoBehaviour
         //Ќе понимаю как разместить в нужном месте
         Debug.Log("ArrangeUnit");
 
-        //        tile.Content = contentFactory.Get(GameTileContentType.Empty);
+        //tile.Content = contentFactory.Get(GameTileContentType.Empty);
         //tile.Content = contentFactory.Get(towerType);
         //updatingContent.Add(tile.Content);
     }

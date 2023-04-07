@@ -25,7 +25,7 @@ public class BFUnitDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-	//up
+
         // Debug.Log("OnBeginDrag");
         //canvasGroup.alpha = 0.6f;
         //canvasGroup.blocksRaycasts = false;

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89866873bb5975f42948ea3b7b141166, type: 3}
+  m_Name: UnitsData
+  m_EditorClassIdentifier: 
+  units:
+  - sprite: {fileID: 21300000, guid: 1fdc3cd7373b2904889e20024dd4652e, type: 3}
+    uiPrefab: {fileID: 7277195472684623965, guid: bc9edbd2711e73548ac56ba47a3b47b2, type: 3}
+    gamePrefab: {fileID: 4800596573821031274, guid: d2ab178f26dc4aa4891b0f967cb4332b, type: 3}
+    color: {r: 0.14509805, g: 0.18431373, b: 0.5019608, a: 1}
+  - sprite: {fileID: 21300000, guid: 001cf40ba6b0ff14eb61b656497fd648, type: 3}
+    uiPrefab: {fileID: 7277195472684623965, guid: bc9edbd2711e73548ac56ba47a3b47b2, type: 3}
+    gamePrefab: {fileID: 4800596573821031274, guid: d2ab178f26dc4aa4891b0f967cb4332b, type: 3}
+    color: {r: 0.45098042, g: 0.17254902, b: 0.19215688, a: 1}
+  - sprite: {fileID: 21300000, guid: 3653829ef6a313c4085322a16228278b, type: 3}
+    uiPrefab: {fileID: 7277195472684623965, guid: bc9edbd2711e73548ac56ba47a3b47b2, type: 3}
+    gamePrefab: {fileID: 4800596573821031274, guid: d2ab178f26dc4aa4891b0f967cb4332b, type: 3}
+    color: {r: 0.47058827, g: 0.48627454, b: 0.18039216, a: 1}

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class BFMenu : MonoBehaviour
+public class TinyMenu : MonoBehaviour
 {
     public void Exit()
     {
@@ -18,6 +19,11 @@ public class BFMenu : MonoBehaviour
         BFGlobalVariables.Next();
         // не работает
         //     GlobalVariables.MoveTurn[GlobalVariables.ListIndex].GetComponent<Move>().SetStepsRemain();
+    }
+
+    public void LoadNextScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
 }
